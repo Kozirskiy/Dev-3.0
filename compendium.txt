@@ -41,6 +41,8 @@ git clone https://github.com/Kozirskiy/Dev-3.0.git project_2 - project_2 це н
 git pull - для оновлення даних з якими будемо працювати
 
 
+ctrl+c --- press twice than you mast write ---  ":wq! + Enter"     --- це робити коли виникає помилка під час зєднання двох гілок на ропозит
+
 
 
 
