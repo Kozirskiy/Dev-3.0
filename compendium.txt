@@ -1,0 +1,32 @@
+I ended        15        lesson
+
+
+_________________________________________________________
+
+GIT'S commands:
+
+cd - change directory - зміна папки на яку потрібно
+
+
+--- Getting Started with GIT ---
+
+git init - найперша команда для ініціалізації 'гіта'
+
+git config --local user.name "Example" - вибираємо локально чи глобально налаштовуємо
+
+git config --local user.email ex@i.ua - вказуємо ел пошту
+
+git status - перевірка статусу файлів під наглядом гіта
+
+git add -A - додавання повністю всіх файлів під нагляд гіта (git add main.css or git add *.css  - варіанти для додавання до гіта)
+
+git commit -a -m"first commit dev 3.0" - додаємо перший комміт з описом що тут було зроблено
+
+
+
+
+
+
+
+
+
