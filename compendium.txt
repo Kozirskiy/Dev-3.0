@@ -22,6 +22,14 @@ git add -A - додавання повністю всіх файлів під н
 
 git commit -a -m"first commit dev 3.0" - додаємо перший комміт з описом що тут було зроблено
 
+git remote add origin https://github.com/Kozirskiy/Dev-3.0.git - після створення репозит. на гітхабі вводимо ці дані
+
+git branch -M main - потім це 
+
+git push -u origin main - в кінці це,  і повинно зявитися в репоз наші дані
+
+
+
 
 
 
