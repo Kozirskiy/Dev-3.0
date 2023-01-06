@@ -103,19 +103,34 @@ console.log(result);
 
 // secondTask();
 
-function thirdTask() {
-    const data = [5, 10, 'Shopping', 20, 'Homework'];
-    const result = [];
+// function thirdTask() {
+//     const data = [5, 10, 'Shopping', 20, 'Homework'];
+//     const result = [];
 
-    for (let i = 1; i <= data.length; i++) {
-        result[i - 1] = data[data.length - i]
-    }
+//     for (let i = 1; i <= data.length; i++) {
+//         result[i - 1] = data[data.length - i]
+//     }
 
-    console.log(result);
-    return result;
-}
+//     console.log(result);
+//     return result;
+// }
 
-thirdTask();
+// thirdTask();
+
+// const lines = 5;
+// let result = '';
+
+// for (let i = 0; i <= lines; i++) {
+//     for (let j = 0; j < lines - i; j++) {
+//         result += " ";
+//     }
+//     for (let k = 0; k < 2 * i + 1; k++) {
+//         result += "*";
+//     }
+//     result += "\n";
+// }
+
+// console.log(result);
 
 
 //_______________________________________________________________________________________________
@@ -133,12 +148,28 @@ const personalMovieDB = {
     privat: false
 };
 
-const a = prompt('one of the last movies watched?', ''),
-      b = prompt('How much do you rate it?', ''),
-      c = prompt('one of the last movies watched?', ''),
-      d = prompt('How much do you rate it?', '');
 
-personalMovieDB.movies[a] = b;
-personalMovieDB.movies[c] = d;
+for (let i = 0; i < 2; i++) {
+    const a = prompt('one of the last movies watched?', ''),
+          b = prompt('How much do you rate it?', '');
+          if ( a != null && b != null && a != '' && b != '' && a.length < 50 ) {
+            personalMovieDB.movies[a] = b;
+            console.log('Well done');
+          } else {
+            console.log('Erro hmhmhmhmh');
+            i--;
+          }
+}
+
+
+if (personalMovieDB.count < 10 ) {
+    console.log('Cool');
+} else if ( personalMovieDB.count >= 10 && personalMovieDB.count < 30 ) {
+    console.log('Cool 2');
+} else if (personalMovieDB.count >= 30 ) {
+    console.log('You like movies');
+} else {
+    console.log('Try again later');
+}
 
 console.log(personalMovieDB);
