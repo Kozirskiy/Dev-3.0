@@ -32,17 +32,17 @@
 //     }
 // }
 
-let result = '';
-const lenght = 7;
+// let result = '';
+// const lenght = 7;
 
-for (let i = 1; i < lenght; i++) {
-    for (let j = 0; j < i; j++) {
-        result += "*";
-    }
-    result += '\n';
-}
+// for (let i = 1; i < lenght; i++) {
+//     for (let j = 0; j < i; j++) {
+//         result += "*";
+//     }
+//     result += '\n';
+// }
 
-console.log(result);
+// console.log(result);
 
 
 // first: for (let i = 0; i < 3; i++) {
@@ -131,6 +131,161 @@ console.log(result);
 // }
 
 // console.log(result);
+
+
+// function 
+
+// function showFirstMessage(text) {
+//     console.log(text);
+// }
+// showFirstMessage('webDev');
+
+// function calc(a, b) {
+//     return (a + b);
+// }
+// console.log(calc(4, 6));
+// console.log(calc(5, 64));
+
+// console.log(calc(54, 6));
+
+
+// const kalk = (s, sd) => {
+//     console.log('sdfs');
+//     return s + sd;
+// }; 
+
+
+// const cursUsd = 28;
+
+// function convert (amount, cursNbu) {
+//     console.log(cursNbu * amount);
+// }
+// convert(250, cursUsd);
+
+
+// function retunFrase(name) {
+//     return `Hello: ${name}`;
+// } 
+// console.log(retunFrase('Olex'));
+
+
+// function sayHello(name) {
+//     return `Привет, ${name}!`;
+// }
+// console.log(sayHello('Alex'));
+
+
+// function retNumArr(number) {
+//     return  [number -1, number, number +1];
+// }
+
+// console.log(retNumArr(3));
+
+// function getMathResult(num, times) {
+//     if (typeof(times) !== 'number' || times <= 0) {
+//         return num;
+//     }
+
+//     let str = '';
+
+//     for (let i = 1; i <= times; i++) {
+//         if (i === times) {
+//             str += `${num * i}`;
+//             // Тут без черточек в конце
+//         } else {
+//             str += `${num * i}---`;
+//             // Это тоже самое, что и
+//             // str = str + num * i + "---"
+//         }
+//     }
+
+//     return str;
+// }
+
+// getMathResult(10, 5);
+
+// function getMathResult(num, times) {
+//     if(typeof(times) !=='number' || times <= 0) {
+//         return num;
+//     }
+
+//     let str = '';
+
+//     for ( let i = 1; i <= times; i ++) {
+//         if ( i === times) {
+//             str += `${num * i}`;
+//         } else {
+//             str += `${ num * i}---`;
+//             //str = str + num * i + "---"
+//         }
+//     }
+//     return str;
+// }
+
+// console.log(getMathResult(5, 15));
+
+// const str = 'Test'; 
+
+// console.log(str.toLowerCase());
+// console.log(str);
+
+// const fruit = 'Some fruit';
+
+// console.log(fruit.indexOf('q'));
+
+// const logg = 'Hello developer';
+
+// console.log(logg.slice(6, 15));
+
+// console.log(logg.substring(6, 15));
+
+// console.log(logg.substr(6, 8));
+
+const num = 12.2;
+
+console.log(Math.round(num));
+
+const numTest = '12.2px';
+
+console.log(parseInt(numTest));
+
+console.log(parseFloat(numTest));
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 //_______________________________________________________________________________________________
