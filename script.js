@@ -251,6 +251,154 @@
 
 // console.log(parseFloat(numTest));
 
+//____________
+// function calculateVolumeAndArea(length) {
+//     if (typeof(length) !== 'number' || length < 0 || !Number.isInteger(length)) {
+//         return "При вычислении произошла ошибка";
+//     }
+
+//     let volume = 0,
+//         area = 0;
+    
+//     volume = length * length * length;
+//     // length ** 3 - это тоже самое, что и выше или варианты через цикл.
+//     // ** - это оператор степени, напоминаю. Но онлайн редактор его не принимает =/
+//     area = 6 * (length * length);
+
+//     return `Объем куба: ${volume}, площадь всей поверхности: ${area}`;
+// }
+// console.log(calculateVolumeAndArea(52));
+//____________
+
+
+// function getCoupeNumber(seatNumber) {
+//     if (typeof(seatNumber) !== 'number' || seatNumber < 0 || !Number.isInteger(seatNumber)) {
+//         return "Ошибка. Проверьте правильность введенного номера места";
+//     }
+
+//     if (seatNumber === 0 || seatNumber > 36) {
+//         return "Таких мест в вагоне не существует";
+//     }
+
+//     for (let i = 4; i <= 36; i = i + 4) {
+//         if (seatNumber <= i) {
+//             return Math.ceil(i / 4);
+//         }
+//     }
+//     // тут очень много вариантов решения, но выбрал один из элегантных :)
+// }
+
+// console.log(getCoupeNumber(28));
+
+// function getCoupNumber(seatNumber) {
+//     if (typeof(seatNumber) !=='number' || seatNumber == "" || seatNumber < 0 || !Number.isInteger(seatNumber)) {
+//         return 'Error. Please, check your writing number';
+//     }
+
+//     if (seatNumber === 0 || seatNumber > 36 ) {
+//         return "This seat does'n exist";
+//     }
+//      for (let i = 4; i <= 36; i= i + 4) {
+//         if (seatNumber <= i) {
+//             return Math.ceil(i / 4);
+//         }
+//      }
+// }
+
+// console.log(getCoupNumber(20));
+
+// _____________________________
+
+// Место для первой задачи
+
+// function getTimeFromMinutes(minutesTotal) {
+//     if (typeof(minutesTotal) !== 'number' || minutesTotal < 0 || !Number.isInteger(minutesTotal)) {
+//         return "Ошибка, проверьте данные";
+//     }
+
+//     const hours = Math.floor(minutesTotal / 60);
+//     const minutes = minutesTotal % 60;
+
+//     let hoursStr = '';
+
+//     switch (hours) {
+//         case 0: 
+//             hoursStr = 'часов';
+//             break;
+//         case 1:
+//             hoursStr = 'час';
+//             break;
+//         case 2:
+//         case 3:
+//         case 4:
+//             hoursStr = 'часа';
+//             break;
+//         default:
+//             hoursStr = 'часов';
+//     }
+
+//     return `Это ${hours} ${hoursStr} и ${minutes} минут`;
+// }
+// _____________
+// function getTimeFromMinutes(minutesTotal) {
+//     if(typeof(minutesTotal) !== 'number' || minutesTotal < 0 || !Number.isInteger(minutesTotal)) {
+//         return 'Error';
+//     }
+//     const hours = Math.floor(minutesTotal / 60),
+//           minutes = minutesTotal % 60;
+
+//     let hoursStr = '';
+
+//     switch (hours) {
+//         case 0:
+//             hoursStr = 'часов';
+//             break;
+//         case 1 :
+//             hoursStr = 'час';
+//             break;
+//         case 2:
+//         case 3:
+//         case 4:
+//             hoursStr = 'часа';
+//             break;
+//         default: 
+//             hoursStr = 'часов';
+//     }
+//     return `This is ${hours} ${hoursStr} and ${minutes}`;
+// }
+
+// console.log(getTimeFromMinutes(553));
+//______________________________________________
+// function findMaxNumber(a, b ,c, d) {
+//     // Самое простое - это использовать Math.max :)
+//     // А оптимизировать такую проверку мы научимся совсем скоро
+//     if (typeof(a) !== 'number' ||
+//         typeof(b) !== 'number' ||
+//         typeof(c) !== 'number' ||
+//         typeof(d) !== 'number') {
+//         return 0;
+//     } else {
+//         return Math.max(a, b ,c, d);
+//     }
+// }
+// ____________________________________________________
+
+
+function findMaxNumber(a, b, c, d) {
+    if ( typeof(a) !=='number' || 
+        typeof(b) !== 'number' ||
+        typeof(c) !== 'number' || 
+        typeof(d) !== 'number') {
+            return 0;
+        } else {
+            return Math.max(a, b, c, d);
+        }
+}
+
+console.log(findMaxNumber(3, 4, 55, 22));
+
+
+
 
 
 
