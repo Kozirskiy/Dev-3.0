@@ -397,8 +397,104 @@ function findMaxNumber(a, b, c, d) {
 
 console.log(findMaxNumber(3, 4, 55, 22));
 
+//_____________________________
+
+// function fib(a) {
+//     if (typeof(a) !== 'number' || !Number.isInteger(a)) {
+//         return '';
+//     } else {
+//         let arr = [0, 1];
+//         for (let i = 2; i < a; i++) {
+//             arr[i] = arr[i-1] + arr[i-2];
+//             }
+//             arr = arr.slice(0, a);
+//             return arr.join(' ');
+//         }
+// }
+
+//_____________________
+
+// function fibanachi(a) {
+//     if (typeof(a) !== 'number' || !Number.isInteger(a)) {
+//         return '';
+//     } else {
+//         let arr = [0, 1];
+//         for (let i = 2; i < a; i++) {
+//             arr[i] = arr[i-1] + arr[i - 2];
+//         }
+//         arr = arr.slice(0, a);
+//         return arr.join('');
+//     }
+// }
+// console.log(fibanachi(31));
+
+// ________________________________________
+
+// function first() {
+//     setTimeout(function() {
+//         console.log(1);
+//     }, 2000);
+// } 
+
+// function second() {
+//     console.log(2);
+// }
+
+// first();
+// second();
+// ____________________
+// function learnJS(lang, callback) {
+//     console.log(`I learn: ${lang}`);
+//     callback();
+// }
+
+// function done() {
+//     console.log('I finished this lesson');
+// }
+// learnJS('Java Script', done);
+// _______________________________________
+
+// const options = {
+//     name: 'test',
+//     width: 1024,
+//     height: 1024,
+//     color: {
+//         border: 'black',
+//         bg: 'red'
+//     },
+//     makeTest:function () {
+//         console.log('Test from metod object');
+//     }
+// };
+
+// const {border, bg} = options.color;
+// console.log(border);
+
+// options.makeTest();
+
+// console.log(Object.keys(options).length);
+
+// console.log(options["color"]["border"]);
+
+// delete options.name;
+
+// console.log(options);
 
 
+// let counter = 0;
+
+// for (let key in options) {
+//     if(typeof(options[key]) === 'object') {
+//         for (let i in options[key]) { 
+//         console.log(`Властивість ${i} має значення ${options[key][i]}`);
+//         counter++;
+//         }
+//     } else {
+//          console.log(`Властивість ${key} має значення ${options[key]}`);
+//          counter++;
+//     }
+// }
+// console.log(counter);
 
 
 
@@ -465,7 +561,7 @@ const personalMovieDB = {
 
 function rememberMyFilms() {
     for (let i = 0; i < 2; i++) {
-        const a = prompt('one of the last movies watched?', ''),
+        const a = prompt('one of the last movies watched?', '').trim(),
               b = prompt('How much do you rate it?', '');
               if ( a != null && b != null && a != '' && b != '' && a.length < 50 ) {
                 personalMovieDB.movies[a] = b;
