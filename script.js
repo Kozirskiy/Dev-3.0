@@ -496,6 +496,47 @@ console.log(findMaxNumber(3, 4, 55, 22));
 // }
 // console.log(counter);
 
+//_________________________32 
+// const arr = [10, 2, 13, 6, 8];
+// arr.sort(compareNum);
+// console.log(arr);
+
+// function compareNum(a, b) {
+//     return a - b;
+// }
+
+
+// arr.forEach(function(item, i, ) {
+//     console.log(`${i}: ${item} in array ${arr}`);
+// });
+
+// const str = prompt('', '');
+
+// const products = str.split(', ');
+
+// products.sort();
+// console.log(products.join('; '));
+
+
+
+
+
+
+
+
+// arr[99] = 0;
+// arr.pop();
+// arr.push(10);
+// console.log(arr.length);
+// console.log(arr);
+// console.log(arr);
+
+// for (let i = 0; i < arr.length; i++) {
+//     console.log(arr[i]);
+// }
+// for (let value of arr ) {
+//     console.log(value);
+// }
 
 
 
@@ -532,75 +573,80 @@ console.log(findMaxNumber(3, 4, 55, 22));
 
 
 
-//_______________________________________________________________________________________________
 
 
 
-let numberOfFilms;
-
-function start() {
-    numberOfFilms = +prompt('How many movies have you watched?', '');
-
-    while (numberOfFilms =='' || numberOfFilms == null || isNaN(numberOfFilms)) {
-        numberOfFilms = +prompt('How many movies have you watched?', '');
-    }
-
-}
-start();
 
 
-const personalMovieDB = {
-    count: numberOfFilms,
-    movies: {},
-    actors: {},
-    genres: [],
-    privat: false
-};
+//___________________________________________practica____________________________________________________
 
 
 
-function rememberMyFilms() {
-    for (let i = 0; i < 2; i++) {
-        const a = prompt('one of the last movies watched?', '').trim(),
-              b = prompt('How much do you rate it?', '');
-              if ( a != null && b != null && a != '' && b != '' && a.length < 50 ) {
-                personalMovieDB.movies[a] = b;
-                console.log('Well done');
-              } else {
-                console.log('Erro hmhmhmhmh');
-                i--;
-              }
-    }
-}
-rememberMyFilms();
+// let numberOfFilms;
+
+// function start() {
+//     numberOfFilms = +prompt('How many movies have you watched?', '');
+
+//     while (numberOfFilms =='' || numberOfFilms == null || isNaN(numberOfFilms)) {
+//         numberOfFilms = +prompt('How many movies have you watched?', '');
+//     }
+
+// }
+// start();
+
+
+// const personalMovieDB = {
+//     count: numberOfFilms,
+//     movies: {},
+//     actors: {},
+//     genres: [],
+//     privat: false
+// };
 
 
 
-function detectPersonalLevel() {
-    if (personalMovieDB.count < 10 ) {
-        console.log('Cool');
-    } else if ( personalMovieDB.count >= 10 && personalMovieDB.count < 30 ) {
-        console.log('Cool 2');
-    } else if (personalMovieDB.count >= 30 ) {
-        console.log('You like movies');
-    } else {
-        console.log('Try again later');
-    }
-}
-detectPersonalLevel();
+// function rememberMyFilms() {
+//     for (let i = 0; i < 2; i++) {
+//         const a = prompt('one of the last movies watched?', '').trim(),
+//               b = prompt('How much do you rate it?', '');
+//               if ( a != null && b != null && a != '' && b != '' && a.length < 50 ) {
+//                 personalMovieDB.movies[a] = b;
+//                 console.log('Well done');
+//               } else {
+//                 console.log('Erro hmhmhmhmh');
+//                 i--;
+//               }
+//     }
+// }
+// rememberMyFilms();
 
-function showMyDB(hidden) {
-    if (!hidden) {
-        console.log(personalMovieDB);
-    }
-}
-showMyDB(personalMovieDB.privat);
 
-function writeYourGenres() {
-    for ( let i = 1; i <= 3; i++) {
+
+// function detectPersonalLevel() {
+//     if (personalMovieDB.count < 10 ) {
+//         console.log('Cool');
+//     } else if ( personalMovieDB.count >= 10 && personalMovieDB.count < 30 ) {
+//         console.log('Cool 2');
+//     } else if (personalMovieDB.count >= 30 ) {
+//         console.log('You like movies');
+//     } else {
+//         console.log('Try again later');
+//     }
+// }
+// detectPersonalLevel();
+
+// function showMyDB(hidden) {
+//     if (!hidden) {
+//         console.log(personalMovieDB);
+//     }
+// }
+// showMyDB(personalMovieDB.privat);
+
+// function writeYourGenres() {
+//     for ( let i = 1; i <= 3; i++) {
         
-        personalMovieDB.genres[i - 1] = prompt(`Your favorite genre have a number: ${i}`);
-    }
-}
-writeYourGenres();
+//         personalMovieDB.genres[i - 1] = prompt(`Your favorite genre have a number: ${i}`);
+//     }
+// }
+// writeYourGenres();
 
