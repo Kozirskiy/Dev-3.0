@@ -538,6 +538,67 @@ console.log(findMaxNumber(3, 4, 55, 22));
 //     console.log(value);
 // }
 
+//________35
+
+function copy(mainObj) {
+    let objCopy = {};
+    let key;
+    for (key  in mainObj) {
+        objCopy[key] = mainObj[key];
+    }
+
+    return objCopy;
+}
+
+const numbers = {
+    a: 2,
+    b: 5,
+    c: {
+        x: 7,
+        y: 4
+    }
+};
+
+const newNumbers = copy(numbers);
+
+newNumbers.a = 10;
+
+console.log(newNumbers);
+
+console.log(numbers);
+
+const add = {
+    d: 17,
+    e: 20
+};
+
+const clon = Object.assign({}, add);
+clon.d = 20;
+
+console.log(clon);
+
+const oldArr = ['a', 'b', 'c'];
+const newArr = oldArr.slice();
+
+
+newArr[1] = 'ewfweefwf';
+console.log(newArr);
+console.log(oldArr);
+
+const video = ['youtube', 'vimeo'],
+      blogs = ['wordpress', 'livejournal', 'bloger'],
+      internet = [...video, ...blogs, 'fb'];
+
+console.log(internet);
+
+
+function log(a, b, c) {
+    console.log(a);
+    console.log(b);
+    console.log(c);
+
+}
+
 
 
 
