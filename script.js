@@ -540,65 +540,277 @@ console.log(findMaxNumber(3, 4, 55, 22));
 
 //________35
 
-function copy(mainObj) {
-    let objCopy = {};
-    let key;
-    for (key  in mainObj) {
-        objCopy[key] = mainObj[key];
-    }
+// function copy(mainObj) {
+//     let objCopy = {};
+//     let key;
+//     for (key  in mainObj) {
+//         objCopy[key] = mainObj[key];
+//     }
 
-    return objCopy;
-}
+//     return objCopy;
+// }
 
-const numbers = {
-    a: 2,
-    b: 5,
-    c: {
-        x: 7,
-        y: 4
-    }
-};
+// const numbers = {
+//     a: 2,
+//     b: 5,
+//     c: {
+//         x: 7,
+//         y: 4
+//     }
+// };
 
-const newNumbers = copy(numbers);
+// const newNumbers = copy(numbers);
 
-newNumbers.a = 10;
+// newNumbers.a = 10;
 
-console.log(newNumbers);
+// console.log(newNumbers);
 
-console.log(numbers);
+// console.log(numbers);
 
-const add = {
-    d: 17,
-    e: 20
-};
+// const add = {
+//     d: 17,
+//     e: 20
+// };
 
-const clon = Object.assign({}, add);
-clon.d = 20;
+// const clon = Object.assign({}, add);
+// clon.d = 20;
 
-console.log(clon);
+// console.log(clon);
 
-const oldArr = ['a', 'b', 'c'];
-const newArr = oldArr.slice();
-
-
-newArr[1] = 'ewfweefwf';
-console.log(newArr);
-console.log(oldArr);
-
-const video = ['youtube', 'vimeo'],
-      blogs = ['wordpress', 'livejournal', 'bloger'],
-      internet = [...video, ...blogs, 'fb'];
-
-console.log(internet);
+// const oldArr = ['a', 'b', 'c'];
+// const newArr = oldArr.slice();
 
 
-function log(a, b, c) {
-    console.log(a);
-    console.log(b);
-    console.log(c);
+// newArr[1] = 'ewfweefwf';
+// console.log(newArr);
+// console.log(oldArr);
 
-}
+// const video = ['youtube', 'vimeo'],
+//       blogs = ['wordpress', 'livejournal', 'bloger'],
+//       internet = [...video, ...blogs, 'fb'];
 
+// console.log(internet);
+
+
+// function log(a, b, c) {
+//     console.log(a);
+//     console.log(b);
+//     console.log(c);
+// }
+// const numb = [2, 5, 6];
+// log(...numb);
+
+// const ara = ['a', 'b'];
+// const araCopy = [...ara];
+
+// console.log(ara);
+
+// araCopy[0] = 2;
+// console.log(araCopy);
+
+// const oldObject = {
+//     one: 1, 
+//     two: 2 
+// };
+
+// const newObject = {
+//     ...oldObject
+// };
+
+// console.log(newObject);
+
+
+// const personalPlanPeter = {
+//     name: "Peter",
+//     age: "29",
+//     skills: {
+//         languages: ['ru', 'eng'],
+//         programmingLangs: {
+//             js: '20%',
+//             php: '10%'
+//         },
+//         exp: '1 month'
+//     },
+//     showAgeAndLangs: function(plan) {
+//         const {age} = plan;
+//         const {languages} = plan.skills;
+//         let str = `Мне ${age} и я владею языками: `;
+
+//         languages.forEach(function(lang) {
+//             str += `${lang.toUpperCase()} `;
+//         });
+
+//         return str;
+//     }
+// };
+
+// personalPlanPeter.showAgeAndLangs(personalPlanPeter);
+
+// function showExperience(plan) {
+//     const {exp} = plan.skills;
+//     return exp;
+// }
+
+// showExperience(personalPlanPeter);
+
+// function showExperience(plan) {
+//     const {exp} = plan.skills;
+//     return exp;
+// }
+// showExperience();
+
+// function showProgrammingLangs(plan) {
+//     let str = '';
+//     const {programmingLangs} = plan.skills;
+//     for (let key in programmingLangs) {
+//         str += `Язык ${key} изучен на ${programmingLangs[key]}\n`;
+//     }
+
+//     return str;
+// }
+
+// showProgrammingLangs(personalPlanPeter);
+//______________________________________________________
+
+// const family = ['Peter', 'Ann', 'Alex', 'Linda'];
+
+// function showFamily(arr) {
+//     let str = '';
+
+//     arr.length === 0 ? str = 'Семья пуста' : str = 'Семья состоит из: ';
+
+//     arr.forEach(member => {
+//         str += `${member} `
+//     });
+
+//     return str;
+// }
+// showFamily(family);
+
+// function showFamily(arr) {
+//     let str = '';
+
+   // arr.lenght === 0 ? str = 'Family is empty' : str = 'Family consist of: ';
+
+//     if(arr.length === 0 ) {
+//         str = 'Family is empty';
+//     } else {
+//         str = 'Family consist of: ';
+//     }
+//     arr.forEach(member => {
+//         str += `${member} `;
+//     });
+
+//     return str;
+// }
+
+// console.log(showFamily(family));
+
+// const favoriteCities = ['liSBon', 'ROME', 'miLan', 'Dublin'];
+
+// function standardizeStrings(arr) {
+//     arr.forEach(city => {
+//         console.log(city.toLowerCase())
+//     });
+// }
+
+// standardizeStrings(favoriteCities);
+
+// function size(arr) {
+//     arr.forEach(element => {
+//         console.log(element.toLowerCase());
+       
+//     });
+// }
+// size(favoriteCities);
+
+
+//+_______________________________________________
+
+// const someString = 'This is some strange string';
+
+// function reverse(str) {
+//     if (typeof(str) !== 'string') {
+//         return "Ошибка!";
+//     }
+//     // Самый оптимальный вариант решения
+//     return console.log(str.split('').reverse());
+
+    
+
+//     // Решение при помощи цикла
+//     // let newStr = '';
+//     // for (let i = str.length - 1; i >= 0; i--) {
+//     //     newStr += str[i];
+//     // }
+//     // return newStr
+
+//     // let strNew = '';
+//     // for (let i = str.length - 1; i >=0; i--) {
+//     //     strNew += str[i];
+//     // }
+//     // return console.log(strNew);
+    
+// }
+
+// reverse(someString);
+
+// const baseCurrencies = ['USD', 'EUR'];
+// const additionalCurrencies = ['UAH', 'RUB', 'CNY'];
+
+// function availableCurr(arr, missingCurr) {
+//     // let str = '';
+//     //  arr.length === 0 ? str = 'Нет доступных валют' : str = 'Доступные валюты:\n';
+
+//     // arr.forEach(function(curr, i) {
+//     //     if (curr !== missingCurr) {
+//     //         str += `${curr}\n`;
+//     //     }
+//     // });
+
+//     let str = '';
+//     arr.length === 0 ? str = 'No avaliable curency' : str = 'Avaliable curency: \n';
+
+//     arr.forEach(function (curr) {
+//         if (curr !== missingCurr) {
+//             str += `${curr}\n`;
+//         }
+//     });
+
+//     //Или
+//     // for (let i = 0; i < arr.length; i++) {
+//     //     if (arr[i] === missingCurr) {
+//     //         continue;
+//     //     }
+//     //     str += `${arr[i]}\n`;
+//     // }
+
+//     return str;
+// }
+//  console.log(availableCurr([...baseCurrencies, ...additionalCurrencies], 'CNY'));
+
+// console.dir([1, 2, 3]);
+
+// const solder = {
+//     helth: 400,
+//     armor: 200,
+//     sayHello: function() {
+//         console.log('hello');
+//     }
+// }; 
+
+// const john = Object.create(solder);
+// const john = {
+//     helth: 100
+// };
+
+// john.__proto__ = solder;
+// console.log(john.armor);
+// Object.setPrototypeOf(john, solder);
+
+
+
+// john.sayHello();
 
 
 
