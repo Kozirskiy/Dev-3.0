@@ -855,71 +855,84 @@ console.log(findMaxNumber(3, 4, 55, 22));
 
 
 
-// let numberOfFilms;
+const personalMovieDB = {
+    count: 0,
+    movies: {},
+    actors: {},
+    genres: [],
+    privat: false,
+    start: ()  => {
+        personalMovieDB.count = +prompt('How many movies have you watched?', '');
+    
+        while (personalMovieDB.count =='' || personalMovieDB.count == null || isNaN(personalMovieDB.count)) {
+            personalMovieDB.count = +prompt('How many movies have you watched?', '');
+        }
+    
+    },
+    rememberMyFilms: function() {
+        for (let i = 0; i < 2; i++) {
+            const a = prompt('one of the last movies watched?', '').trim(),
+                  b = prompt('How much do you rate it?', '');
+                  if ( a != null && b != null && a != '' && b != '' && a.length < 50 ) {
+                    personalMovieDB.movies[a] = b;
+                    console.log('Well done');
+                  } else {
+                    console.log('Erro hmhmhmhmh');
+                    i--;
+                  }
+        }
+    },
+    detectPersonalLevel: function() {
+        if (personalMovieDB.count < 10 ) {
+            console.log('Cool');
+        } else if ( personalMovieDB.count >= 10 && personalMovieDB.count < 30 ) {
+            console.log('Cool 2');
+        } else if (personalMovieDB.count >= 30 ) {
+            console.log('You like movies');
+        } else {
+            console.log('Try again later');
+        }
+    },
+    showMyDB: function(hidden) {
+        if (!hidden) {
+            console.log(personalMovieDB);
+        }
+    },
+    toggleVisibleMyDB: function() {
+        if (personalMovieDB.privat) {
+            personalMovieDB.privat = false;
+        } else {
+            personalMovieDB.privat = true;
+        }
+    },
+    writeYourGenres: function() {
+        for ( let i = 1; i <= 2; i++) {
+            // let genre = prompt(`Your favorite genre have a number: ${i}`);
 
-// function start() {
-//     numberOfFilms = +prompt('How many movies have you watched?', '');
+            // if (genre === '' || genre == null) {
+            //     console.log('You entered incorrect data or did not enter it at all');
+            //     i--;
+            // } else {
+            //     personalMovieDB.genres[i - 1] = genre;
+            // }
 
-//     while (numberOfFilms =='' || numberOfFilms == null || isNaN(numberOfFilms)) {
-//         numberOfFilms = +prompt('How many movies have you watched?', '');
-//     }
+            //another variant
 
-// }
-// start();
+            let genre = prompt(`Enter your genres with commas`).toLowerCase();
+            if (genre === '' || genre == null) {
+                console.log('You entered incorrect data or did not enter it at all');
+                i--;
+            } else {
+                personalMovieDB.genres.split(', ');
+                personalMovieDB.genres.sort()
+            }
+        }  
 
+        personalMovieDB.genres.forEach((item, i) => {
+            console.log(`Favorite genre ${i + 1} this is ${item}`);
+        });
+    }
 
-// const personalMovieDB = {
-//     count: numberOfFilms,
-//     movies: {},
-//     actors: {},
-//     genres: [],
-//     privat: false
-// };
+};
 
-
-
-// function rememberMyFilms() {
-//     for (let i = 0; i < 2; i++) {
-//         const a = prompt('one of the last movies watched?', '').trim(),
-//               b = prompt('How much do you rate it?', '');
-//               if ( a != null && b != null && a != '' && b != '' && a.length < 50 ) {
-//                 personalMovieDB.movies[a] = b;
-//                 console.log('Well done');
-//               } else {
-//                 console.log('Erro hmhmhmhmh');
-//                 i--;
-//               }
-//     }
-// }
-// rememberMyFilms();
-
-
-
-// function detectPersonalLevel() {
-//     if (personalMovieDB.count < 10 ) {
-//         console.log('Cool');
-//     } else if ( personalMovieDB.count >= 10 && personalMovieDB.count < 30 ) {
-//         console.log('Cool 2');
-//     } else if (personalMovieDB.count >= 30 ) {
-//         console.log('You like movies');
-//     } else {
-//         console.log('Try again later');
-//     }
-// }
-// detectPersonalLevel();
-
-// function showMyDB(hidden) {
-//     if (!hidden) {
-//         console.log(personalMovieDB);
-//     }
-// }
-// showMyDB(personalMovieDB.privat);
-
-// function writeYourGenres() {
-//     for ( let i = 1; i <= 3; i++) {
-        
-//         personalMovieDB.genres[i - 1] = prompt(`Your favorite genre have a number: ${i}`);
-//     }
-// }
-// writeYourGenres();
 
