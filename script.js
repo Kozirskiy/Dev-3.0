@@ -910,6 +910,25 @@
 // // _________________________________
 
 
+function createCounter() {
+   let counter = 0;
+
+   const myFunction = function() {
+      counter = counter + 1;
+      return counter;
+
+      
+   };
+   return myFunction;
+}
+
+const icrement = createCounter();
+const c1 = icrement();
+const c2 = icrement();
+const c3 = icrement();
+
+console.log(c1, c2, c3);
+
 
 
 
