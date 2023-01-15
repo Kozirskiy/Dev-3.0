@@ -384,18 +384,18 @@
 // ____________________________________________________
 
 
-function findMaxNumber(a, b, c, d) {
-    if ( typeof(a) !=='number' || 
-        typeof(b) !== 'number' ||
-        typeof(c) !== 'number' || 
-        typeof(d) !== 'number') {
-            return 0;
-        } else {
-            return Math.max(a, b, c, d);
-        }
-}
+// function findMaxNumber(a, b, c, d) {
+//     if ( typeof(a) !=='number' || 
+//         typeof(b) !== 'number' ||
+//         typeof(c) !== 'number' || 
+//         typeof(d) !== 'number') {
+//             return 0;
+//         } else {
+//             return Math.max(a, b, c, d);
+//         }
+// }
 
-console.log(findMaxNumber(3, 4, 55, 22));
+// console.log(findMaxNumber(3, 4, 55, 22));
 
 //_____________________________
 
@@ -813,7 +813,101 @@ console.log(findMaxNumber(3, 4, 55, 22));
 // john.sayHello();
 
 
+//____________________
 
+// const shoppingMallData = {
+//     shops: [
+//         {
+//             width: 10,
+//             length: 5
+//         },
+//         {
+//             width: 15,
+//             length: 7
+//         },
+//         {
+//             width: 20,
+//             length: 5
+//         },
+//         {
+//             width: 8,
+//             length: 10
+//         }
+//     ],
+//     height: 5,
+//     moneyPer1m3: 30,
+//     budget: 50000
+// };
+
+// function isBudgetEnough(data) {
+
+//     let square = 0;
+//     let volume = 0;
+
+
+//     data.shops.forEach(item => {
+//         square += item.width * item.length;
+//     });
+//     volume = data.height * square;
+
+//     if(data.budget - (volume * data.moneyPer1m3) >= 0 ) {
+//         return 'Budget is enough';
+//     } else {
+//         return 'Budget is not enough';
+//     }
+//  }
+
+//  console.log(isBudgetEnough(shoppingMallData));
+
+
+//_______________________________
+// const students = ['Peter', 'Andrew', 'Ann', 'Mark', 'Josh', 'Sandra', 'Cris', 'Bernard', 'Takesi', 'Loli'];
+
+// function sortStudentsByGroups(arr) {
+//     arr.sort();
+//     const a = [], b = [], c = [], rest = [];
+
+//     for (let i = 0; i < arr.length; i++) {
+//         if (i < 3) {
+//             a.push(arr[i]);
+//         } else if (i < 6) {
+//             b.push(arr[i]);
+//         } else if (i < 9) {
+//             c.push(arr[i]);
+//         } else {
+//             rest.push(arr[i]);
+//         }
+//     }
+//     return [a,b,c, `Оставшиеся студенты: ${rest.length === 0 ? '-' : rest.join(', ')}`];
+// }
+
+// console.log(sortStudentsByGroups(students));
+
+// const students = ['Peter', 'Andrew', 'Ann', 'Mark', 'Josh', 'Sandra', 'Cris', 'Bernard', 'Takesi', 'Sam'];
+
+// function sortStudentsByGroups(arr) {
+//     arr.sort();
+//     const a = [],
+//           b = [], 
+//           c = [],
+//           rest = [];
+
+//     for (let i = 0; i < arr.length; i++) {
+//         if ( i < 3) {
+//             a.push(arr[i]);
+//         } else if ( i < 6 ) {
+//             b.push(arr[i]);
+//         } else if ( i < 9 ) {
+//             c.push(arr[i]);
+//         } else {
+//             rest.push(arr[i]);
+//         }
+//     }
+//     return [a, b, c, `Last students are: ${rest.length === 0 ? '-' : rest.join(', ')}`];
+// }
+
+// console.log(sortStudentsByGroups(students));
+// // _________________________________
 
 
 
@@ -855,84 +949,84 @@ console.log(findMaxNumber(3, 4, 55, 22));
 
 
 
-const personalMovieDB = {
-    count: 0,
-    movies: {},
-    actors: {},
-    genres: [],
-    privat: false,
-    start: ()  => {
-        personalMovieDB.count = +prompt('How many movies have you watched?', '');
+// const personalMovieDB = {
+//     count: 0,
+//     movies: {},
+//     actors: {},
+//     genres: [],
+//     privat: false,
+//     start: ()  => {
+//         personalMovieDB.count = +prompt('How many movies have you watched?', '');
     
-        while (personalMovieDB.count =='' || personalMovieDB.count == null || isNaN(personalMovieDB.count)) {
-            personalMovieDB.count = +prompt('How many movies have you watched?', '');
-        }
+//         while (personalMovieDB.count =='' || personalMovieDB.count == null || isNaN(personalMovieDB.count)) {
+//             personalMovieDB.count = +prompt('How many movies have you watched?', '');
+//         }
     
-    },
-    rememberMyFilms: function() {
-        for (let i = 0; i < 2; i++) {
-            const a = prompt('one of the last movies watched?', '').trim(),
-                  b = prompt('How much do you rate it?', '');
-                  if ( a != null && b != null && a != '' && b != '' && a.length < 50 ) {
-                    personalMovieDB.movies[a] = b;
-                    console.log('Well done');
-                  } else {
-                    console.log('Erro hmhmhmhmh');
-                    i--;
-                  }
-        }
-    },
-    detectPersonalLevel: function() {
-        if (personalMovieDB.count < 10 ) {
-            console.log('Cool');
-        } else if ( personalMovieDB.count >= 10 && personalMovieDB.count < 30 ) {
-            console.log('Cool 2');
-        } else if (personalMovieDB.count >= 30 ) {
-            console.log('You like movies');
-        } else {
-            console.log('Try again later');
-        }
-    },
-    showMyDB: function(hidden) {
-        if (!hidden) {
-            console.log(personalMovieDB);
-        }
-    },
-    toggleVisibleMyDB: function() {
-        if (personalMovieDB.privat) {
-            personalMovieDB.privat = false;
-        } else {
-            personalMovieDB.privat = true;
-        }
-    },
-    writeYourGenres: function() {
-        for ( let i = 1; i <= 2; i++) {
-            // let genre = prompt(`Your favorite genre have a number: ${i}`);
+//     },
+//     rememberMyFilms: function() {
+//         for (let i = 0; i < 2; i++) {
+//             const a = prompt('one of the last movies watched?', '').trim(),
+//                   b = prompt('How much do you rate it?', '');
+//                   if ( a != null && b != null && a != '' && b != '' && a.length < 50 ) {
+//                     personalMovieDB.movies[a] = b;
+//                     console.log('Well done');
+//                   } else {
+//                     console.log('Erro hmhmhmhmh');
+//                     i--;
+//                   }
+//         }
+//     },
+//     detectPersonalLevel: function() {
+//         if (personalMovieDB.count < 10 ) {
+//             console.log('Cool');
+//         } else if ( personalMovieDB.count >= 10 && personalMovieDB.count < 30 ) {
+//             console.log('Cool 2');
+//         } else if (personalMovieDB.count >= 30 ) {
+//             console.log('You like movies');
+//         } else {
+//             console.log('Try again later');
+//         }
+//     },
+//     showMyDB: function(hidden) {
+//         if (!hidden) {
+//             console.log(personalMovieDB);
+//         }
+//     },
+//     toggleVisibleMyDB: function() {
+//         if (personalMovieDB.privat) {
+//             personalMovieDB.privat = false;
+//         } else {
+//             personalMovieDB.privat = true;
+//         }
+//     },
+//     writeYourGenres: function() {
+//         for ( let i = 1; i <= 2; i++) {
+//             // let genre = prompt(`Your favorite genre have a number: ${i}`);
 
-            // if (genre === '' || genre == null) {
-            //     console.log('You entered incorrect data or did not enter it at all');
-            //     i--;
-            // } else {
-            //     personalMovieDB.genres[i - 1] = genre;
-            // }
+//             // if (genre === '' || genre == null) {
+//             //     console.log('You entered incorrect data or did not enter it at all');
+//             //     i--;
+//             // } else {
+//             //     personalMovieDB.genres[i - 1] = genre;
+//             // }
 
-            //another variant
+//             //another variant
 
-            let genre = prompt(`Enter your genres with commas`).toLowerCase();
-            if (genre === '' || genre == null) {
-                console.log('You entered incorrect data or did not enter it at all');
-                i--;
-            } else {
-                personalMovieDB.genres.split(', ');
-                personalMovieDB.genres.sort()
-            }
-        }  
+//             let genre = prompt(`Enter your genres with commas`).toLowerCase();
+//             if (genre === '' || genre == null) {
+//                 console.log('You entered incorrect data or did not enter it at all');
+//                 i--;
+//             } else {
+//                 personalMovieDB.genres.split(', ');
+//                 personalMovieDB.genres.sort()
+//             }
+//         }  
 
-        personalMovieDB.genres.forEach((item, i) => {
-            console.log(`Favorite genre ${i + 1} this is ${item}`);
-        });
-    }
+//         personalMovieDB.genres.forEach((item, i) => {
+//             console.log(`Favorite genre ${i + 1} this is ${item}`);
+//         });
+//     }
 
-};
+// };
 
 
