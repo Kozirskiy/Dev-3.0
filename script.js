@@ -930,40 +930,40 @@
 // console.log(c1, c2, c3);
 //__________________
 
-const restorantData = {
-   menu: [
-       {
-           name: 'Salad Caesar',
-           price: '14$'
-       },
-       {
-           name: 'Pizza Diavola',
-           price: '9$'
-       },
-       {
-           name: 'Beefsteak',
-           price: '17$'
-       },
-       {
-           name: 'Napoleon',
-           price: '7$'
-       }
-   ],
-   waitors: [
-       {name: 'Alice', age: 22}, {name: 'John', age: 24}
-   ],
-   averageLunchPrice: '20$',
-   openNow: false
-};
-function isOpen(prop) { 
-    let  answer;
-    if ( prop === true ) {
-      return answer = 'Open';
-    } else { 
-         return answer = 'Close';
-    }
+// const restorantData = {
+//    menu: [
+//        {
+//            name: 'Salad Caesar',
+//            price: '14$'
+//        },
+//        {
+//            name: 'Pizza Diavola',
+//            price: '9$'
+//        },
+//        {
+//            name: 'Beefsteak',
+//            price: '17$'
+//        },
+//        {
+//            name: 'Napoleon',
+//            price: '7$'
+//        }
+//    ],
+//    waitors: [
+//        {name: 'Alice', age: 22}, {name: 'John', age: 24}
+//    ],
+//    averageLunchPrice: '20$',
+//    openNow: false
+// };
+// function isOpen(prop) { 
+//     let  answer;
+//     if ( prop === true ) {
+//       return answer = 'Open';
+//     } else { 
+//          return answer = 'Close';
+//     }
 
- }
+//  }
 
 //  function transferWaitors(data) {
 //     const copy = Object.assign({}, data);
@@ -974,15 +974,15 @@ function isOpen(prop) {
 
 // console.log(transferWaitors(restorantData));
 
-const firstObj = {
-    nameOfPeopple:  [{ name: 'Jon', age: 25 }, { name: 'Bob',  age: 23 }] 
-};
-function copyName(it) {
-    const copy = Object.assign({}, it);
-    copy.nameOfPeopple[0] = [{name: 'Kaban', age: 35}];
-    return copy;
-}
-console.log(copyName(firstObj));
+// const firstObj = {
+//     nameOfPeopple:  [{ name: 'Jon', age: 25 }, { name: 'Bob',  age: 23 }] 
+// };
+// function copyName(it) {
+//     const copy = Object.assign({}, it);
+//     copy.nameOfPeopple[0] = [{name: 'Kaban', age: 35}];
+//     return copy;
+// }
+// console.log(copyName(firstObj));
 
 // function transferWaitors(data) {
 //     const copy = Object.assign({}, data);
@@ -1064,6 +1064,10 @@ console.log(copyName(firstObj));
 
 
 // alert(+'Infinity');
+
+
+const box = document.getElementById('box');
+
 
 
 
