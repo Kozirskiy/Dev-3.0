@@ -910,29 +910,160 @@
 // // _________________________________
 
 
-function createCounter() {
-   let counter = 0;
+// function createCounter() {
+//    let counter = 0;
 
-   const myFunction = function() {
-      counter = counter + 1;
-      return counter;
+//    const myFunction = function() {
+//       counter = counter + 1;
+//       return counter;
 
       
-   };
-   return myFunction;
+//    };
+//    return myFunction;
+// }
+
+// const icrement = createCounter();
+// const c1 = icrement();
+// const c2 = icrement();
+// const c3 = icrement();
+
+// console.log(c1, c2, c3);
+//__________________
+
+const restorantData = {
+   menu: [
+       {
+           name: 'Salad Caesar',
+           price: '14$'
+       },
+       {
+           name: 'Pizza Diavola',
+           price: '9$'
+       },
+       {
+           name: 'Beefsteak',
+           price: '17$'
+       },
+       {
+           name: 'Napoleon',
+           price: '7$'
+       }
+   ],
+   waitors: [
+       {name: 'Alice', age: 22}, {name: 'John', age: 24}
+   ],
+   averageLunchPrice: '20$',
+   openNow: false
+};
+function isOpen(prop) { 
+    let  answer;
+    if ( prop === true ) {
+      return answer = 'Open';
+    } else { 
+         return answer = 'Close';
+    }
+
+ }
+
+//  function transferWaitors(data) {
+//     const copy = Object.assign({}, data);
+
+//     copy.waitors[0] = [{name: 'Mike', age: 32}];
+//     return copy;
+// }
+
+// console.log(transferWaitors(restorantData));
+
+const firstObj = {
+    nameOfPeopple:  [{ name: 'Jon', age: 25 }, { name: 'Bob',  age: 23 }] 
+};
+function copyName(it) {
+    const copy = Object.assign({}, it);
+    copy.nameOfPeopple[0] = [{name: 'Kaban', age: 35}];
+    return copy;
 }
+console.log(copyName(firstObj));
 
-const icrement = createCounter();
-const c1 = icrement();
-const c2 = icrement();
-const c3 = icrement();
+// function transferWaitors(data) {
+//     const copy = Object.assign({}, data);
 
-console.log(c1, c2, c3);
+//     // Нам просто нужно менять весь массив данных,
+//     // а не лезть напрямую менять каждого из сотрудников
+//     // Так как это верхний уровень объекта, то значение 
+//     // будет меняться только у копии
+//     copy.waitors = [{name: 'Mike', age: 32}];
+//     return copy;
+// }
+
+
+
+//  console.log(isOpen(restorantData.openNow));
+
+//  or
+
+// function isOpen(prop) {
+//     let answer = '';
+//     prop ? answer = 'Открыто' : answer = 'Закрыто';
+
+//     return answer;
+// }
+
+// console.log(isOpen(restorantData.openNow));
 
 
 
 
 
+// function isAverageLunchPriceTrue(fDish, sDish, average) {
+//    if (+fDish.price.slice(0, -1) + (+sDish.price.slice(0, -1)) < +average.slice(0, -1)) {
+//        return 'Цена ниже средней';
+//    } else {
+//        return 'Цена выше средней';
+//    }
+// }
+// console.log(isAverageLunchPriceTrue(restorantData.menu[0], restorantData.menu[1], restorantData.averageLunchPrice)); 
+
+
+
+
+
+
+//__________________________________________
+// let x = 5;
+// alert(++x);
+
+// [] + false - null + true;
+
+// console.log([] + false - null + true); =====NaN
+
+// let y = 1;
+// let x = y = 2;
+// alert(x);
+
+// console.log([] + 1 + 2);
+//alert('1'[0]);
+
+// console.log(2 && 1 && null && 0 && undefined);
+
+// if(!!(1 && 3) == (1 && 3)) {
+//     console.log('100%');
+// } else {
+//     console.log('0%');
+// }
+
+//alert(null || 2 && 3 || 4);
+
+// let a = [1, 2, 3];
+// let b = [1, 2, 3];
+
+// if (a === b) {
+//     console.log('yes');
+// } else {
+//     console.log('no');
+// }
+
+
+// alert(+'Infinity');
 
 
 
