@@ -1066,11 +1066,60 @@
 // alert(+'Infinity');
 
 
-const box = document.getElementById('box');
+const box = document.getElementById('box'),
+      btns = document.getElementsByTagName('button'),
+      circle = document.getElementsByClassName('circle'),
+      wrapper = document.querySelector('.wrapper'),
+      hearts = wrapper.querySelectorAll('.heart'),
+      oneHeart = wrapper.querySelector('div');
+      
+
+    //   box.style.backgroundColor = 'blue';
+    //   box.style.width = '500px';
+      box.style.cssText = `background-color: pink; width: 500px`;
 
 
+      btns[1].style.borderRadius = '100%';
+    //   circle[1].style.backgroundColor = 'red';
+
+    //   for (let i = 0; i < hearts.length; i++) {
+    //     hearts[i].style.backgroundColor = 'pink';
+    //   }
+hearts.forEach(item => {
+    item.style.backgroundColor = 'yellow';
+});
 
 
+const div = document.createElement('div');
+
+const text = document.createTextNode('I was here');
+
+div.classList.add('black');
+
+// document.body.append(div);
+
+
+wrapper.append(div);
+// wrapper.appendChild(div);
+
+// wrapper.insertBefore(div, hearts[1]);
+
+// wrapper.prepend(div);
+
+// hearts[1].before(div);
+// hearts[1].after(div);
+
+// circle[0].remove();
+// wrapper.removeChild(hearts[1]);
+
+// hearts[0].replaceWith(circle[0]);
+
+// wrapper.replaceChild(circle[0], hearts[0]);
+div.innerHTML =`<h1>developer</h1>`;
+
+// div.textContent = `developer`;
+
+div.insertAdjacentHTML('beforeend', `<h2>web</h2>`);
 
 
 

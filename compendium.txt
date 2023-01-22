@@ -52,12 +52,53 @@ _________________________________________________________
 
 Підрахунок елементів в обєкті
 console.log(Object.keys(options).length);
+_________________________________________________________
 
 Must to know:
 1) copy object.
 2) methods for arrays.
 3) cycles.
-________________________________________________________
+_________________________________________________________
+Методи взаємодії з html:
+
+div.classList.add('black');
+
+// document.body.append(div);
+
+wrapper.append(div);
+// wrapper.appendChild(div);
+
+// wrapper.insertBefore(div, hearts[1]);
+
+// wrapper.prepend(div);
+
+// hearts[1].before(div);
+// hearts[1].after(div);
+
+// circle[0].remove();
+
+// wrapper.removeChild(hearts[1]);
+
+// hearts[0].replaceWith(circle[0]);
+
+// wrapper.replaceChild(circle[0], hearts[0]);
+
+div.innerHTML =`<h1>developer</h1>`;
+
+div.textContent = `developer`;
+
+div.insertAdjacentHTML('beforeend', `<h2>web</h2>`);
+______________________________________________________
+
+
+
+
+
+
+
+
+
+_________________________________________________________
 
 
 
