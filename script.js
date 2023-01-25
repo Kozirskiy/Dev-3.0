@@ -1066,40 +1066,40 @@
 // alert(+'Infinity');
 
 
-const box = document.getElementById('box'),
-      btns = document.getElementsByTagName('button'),
-      circle = document.getElementsByClassName('circle'),
-      wrapper = document.querySelector('.wrapper'),
-      hearts = wrapper.querySelectorAll('.heart'),
-      oneHeart = wrapper.querySelector('div');
+// const box = document.getElementById('box'),
+//       btns = document.getElementsByTagName('button'),
+//       circle = document.getElementsByClassName('circle'),
+//       wrapper = document.querySelector('.wrapper'),
+//       hearts = wrapper.querySelectorAll('.heart'),
+//       oneHeart = wrapper.querySelector('div');
       
 
-    //   box.style.backgroundColor = 'blue';
-    //   box.style.width = '500px';
-      box.style.cssText = `background-color: pink; width: 500px`;
+//     //   box.style.backgroundColor = 'blue';
+//     //   box.style.width = '500px';
+//       box.style.cssText = `background-color: pink; width: 500px`;
 
 
-      btns[1].style.borderRadius = '100%';
-    //   circle[1].style.backgroundColor = 'red';
+//       btns[1].style.borderRadius = '100%';
+//     //   circle[1].style.backgroundColor = 'red';
 
-    //   for (let i = 0; i < hearts.length; i++) {
-    //     hearts[i].style.backgroundColor = 'pink';
-    //   }
-hearts.forEach(item => {
-    item.style.backgroundColor = 'yellow';
-});
-
-
-const div = document.createElement('div');
-
-const text = document.createTextNode('I was here');
-
-div.classList.add('black');
-
-// document.body.append(div);
+//     //   for (let i = 0; i < hearts.length; i++) {
+//     //     hearts[i].style.backgroundColor = 'pink';
+//     //   }
+// hearts.forEach(item => {
+//     item.style.backgroundColor = 'yellow';
+// });
 
 
-wrapper.append(div);
+// const div = document.createElement('div');
+
+// const text = document.createTextNode('I was here');
+
+// div.classList.add('black');
+
+// // document.body.append(div);
+
+
+// wrapper.append(div);
 // wrapper.appendChild(div);
 
 // wrapper.insertBefore(div, hearts[1]);
@@ -1115,11 +1115,111 @@ wrapper.append(div);
 // hearts[0].replaceWith(circle[0]);
 
 // wrapper.replaceChild(circle[0], hearts[0]);
-div.innerHTML =`<h1>developer</h1>`;
+// div.innerHTML =`<h1>developer</h1>`;
 
 // div.textContent = `developer`;
 
-div.insertAdjacentHTML('beforeend', `<h2>web</h2>`);
+// div.insertAdjacentHTML('beforeend', `<h2>web</h2>`);
+
+
+// _______________________________________________________RECURSION_________________
+
+// function pow(x, n) {
+//   let result = 1;
+
+//   for (let i = 0; i < n; i++) {
+//     result *= x; 
+//   }
+//   return result;
+// }
+// function pow(x, n) {
+//   if (n === 1 ) {
+//     return x;
+//   } else {
+//     return x * pow(x, n - 1);
+//   }
+// }
+
+// pow(2, 1);//2
+// pow(2, 2);//4
+// pow(2, 3);//8
+// pow(2, 4);//16
+
+let students = {
+  js: [{ name: 'John', progres: 100 },
+       { name: 'Ivan', progres: 100
+       }],
+
+  html: {
+    basic:[{ name: 'Peter', progres: 20 },
+           { name: 'Ann', progres: 18 }],
+
+    pro:  [{ name: 'Sam', progres: 10 }],
+    semi: {students:[{
+      name: 'Test',
+      progres: 100
+    }]    }
+    }
+};
+
+function getTotalProgressByIteration(data) {
+  let total = 0;
+  let students = 0;
+
+  for (let course of Object.values(data)) {
+    if (Array.isArray(course)) {
+      students += course.length;
+
+      for (let i = 0; i < course.length; i++) {
+        total += course[i].progres;
+      }
+    } else {
+      for (let subCourse of Object.values(course)) {
+        students += subCourse.length;
+
+        for (let i = 0; i < subCourse.length; i++) {
+          total += subCourse[i].progres;
+        }
+      }
+    }
+  }
+
+  return total / students;
+}
+
+// console.log(getTotalProgressByIteration(students));
+
+
+
+function getTotalProgressByRecursion(data) {
+  if (Array.isArray(data)) {
+    let total = 0;
+
+    for (let i = 0; i < data.length; i++) {
+      total += data[i].progres;
+    }
+    return [total, data.length]; 
+  } else {
+    let total = [0, 0];
+    for (let subData of Object.values(data)) {
+       const subDataArray = getTotalProgressByRecursion(subData);
+       total[0] += subDataArray[0];
+       total[1] += subDataArray[1];
+    }
+    return total;
+  }
+}
+
+const result = getTotalProgressByRecursion(students);
+console.log(result[0]/result[1]);
+
+
+
+
+
+
+
+
 
 
 
