@@ -1145,73 +1145,143 @@
 // pow(2, 3);//8
 // pow(2, 4);//16
 
-let students = {
-  js: [{ name: 'John', progres: 100 },
-       { name: 'Ivan', progres: 100
-       }],
+// let students = {
+//   js: [{ name: 'John', progres: 100 },
+//        { name: 'Ivan', progres: 100
+//        }],
 
-  html: {
-    basic:[{ name: 'Peter', progres: 20 },
-           { name: 'Ann', progres: 18 }],
+//   html: {
+//     basic:[{ name: 'Peter', progres: 20 },
+//            { name: 'Ann', progres: 18 }],
 
-    pro:  [{ name: 'Sam', progres: 10 }],
-    semi: {students:[{
-      name: 'Test',
-      progres: 100
-    }]    }
-    }
-};
+//     pro:  [{ name: 'Sam', progres: 10 }],
+//     semi: {students:[{
+//       name: 'Test',
+//       progres: 100
+//     }]    }
+//     }
+// };
 
-function getTotalProgressByIteration(data) {
-  let total = 0;
-  let students = 0;
+// function getTotalProgressByIteration(data) {
+//   let total = 0;
+//   let students = 0;
 
-  for (let course of Object.values(data)) {
-    if (Array.isArray(course)) {
-      students += course.length;
+//   for (let course of Object.values(data)) {
+//     if (Array.isArray(course)) {
+//       students += course.length;
 
-      for (let i = 0; i < course.length; i++) {
-        total += course[i].progres;
-      }
-    } else {
-      for (let subCourse of Object.values(course)) {
-        students += subCourse.length;
+//       for (let i = 0; i < course.length; i++) {
+//         total += course[i].progres;
+//       }
+//     } else {
+//       for (let subCourse of Object.values(course)) {
+//         students += subCourse.length;
 
-        for (let i = 0; i < subCourse.length; i++) {
-          total += subCourse[i].progres;
-        }
-      }
-    }
-  }
+//         for (let i = 0; i < subCourse.length; i++) {
+//           total += subCourse[i].progres;
+//         }
+//       }
+//     }
+//   }
 
-  return total / students;
-}
+//   return total / students;
+// }
 
-// console.log(getTotalProgressByIteration(students));
+// // console.log(getTotalProgressByIteration(students));
 
 
 
-function getTotalProgressByRecursion(data) {
-  if (Array.isArray(data)) {
-    let total = 0;
+// function getTotalProgressByRecursion(data) {
+//   if (Array.isArray(data)) {
+//     let total = 0;
 
-    for (let i = 0; i < data.length; i++) {
-      total += data[i].progres;
-    }
-    return [total, data.length]; 
-  } else {
-    let total = [0, 0];
-    for (let subData of Object.values(data)) {
-       const subDataArray = getTotalProgressByRecursion(subData);
-       total[0] += subDataArray[0];
-       total[1] += subDataArray[1];
-    }
-    return total;
-  }
-}
+//     for (let i = 0; i < data.length; i++) {
+//       total += data[i].progres;
+//     }
+//     return [total, data.length]; 
+//   } else {
+//     let total = [0, 0];
+//     for (let subData of Object.values(data)) {
+//        const subDataArray = getTotalProgressByRecursion(subData);
+//        total[0] += subDataArray[0];
+//        total[1] += subDataArray[1];
+//     }
+//     return total;
+//   }
+// }
 
-const result = getTotalProgressByRecursion(students);
-console.log(result[0]/result[1]);
+// const result = getTotalProgressByRecursion(students);
+// console.log(result[0]/result[1]);
+
+// _________________________________
+
+// function factorial(n) {
+//   if (typeof(n) !== 'number' || !Number.isInteger(n)) {
+//       return "Ошибка, проверьте данные";
+//   }
+
+//   if (n >= 1) {
+//       return n * factorial(n - 1);
+//   } else {
+//       return 1;
+//   }
+
+//   // Более короткий вариант, который вы можете встретить
+//   // Но не учитывает отрицательные значения
+//   // return n ? n * factorial(n - 1) : 1;
+// }
+
+// factorial(5);
+
+// function factorial(n){
+//   if (typeof(n) !== 'number' || !Number.isInteger(n)) {
+//     return 'Error!';
+//   }
+
+//   if( n >= 1) {
+//     return n * factorial(n - 1);
+//   } else {
+//     return 1;
+//   }
+// }
+// console.log(factorial(9));
+
+// ____________________________
+
+
+
+//touchstart
+//touchmove
+//touchend
+//touchenter
+//touchleave
+//touchcancel
+
+
+window.addEventListener('DOMContentLoaded', () => {
+  const box = document.querySelector('.box1');
+
+  box.addEventListener('touchstart', (e) => {
+    e.preventDefault();
+
+    console.log('Start');
+    console.log('e.touches');
+    
+
+  });
+
+  // box.addEventListener('touchmove', (e) => {
+  //   e.preventDefault();
+
+  //   console.log('Move');
+  // });
+  // box.addEventListener('touchend', (e) => {
+  //   e.preventDefault();
+
+  //   console.log('end');
+  // });
+});
+
 
 
 

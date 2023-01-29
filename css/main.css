@@ -76,3 +76,8 @@
       margin-top: 10px;
       color: #fff;
   }
+  .box1 {
+    width: 150px;
+    height: 100px;
+    background-color: red;
+}
